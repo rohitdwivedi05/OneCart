@@ -18,8 +18,6 @@ function ProductDetail() {
   const [image4, setImage4] = useState('')
   const [size, setSize] = useState('')
 
-
-
    const fetchProductData = async () => {
     products.map((item) => {
       if (item._id === productId) {
@@ -63,6 +61,7 @@ function ProductDetail() {
                     <img src={image} alt="" className=' w-[100%] lg:h-[100%] h-[100%] text-[30px] text-white  text-center rounded-md object-fill ' />
                 </div>
             </div>
+            
 
             <div className='lg:w-[50vw] w-[100vw] lg:h-[75vh] h-[40vh] lg:mt-[80px] flex items-start justify-start flex-col py-[20px] px-[30px] md:pb-[20px] md:pl-[20px] lg:pl-[0px] lg:px-[0px] lg:py-[0px] gap-[10px]'>
                 <h1 className='text-[40px] font-semibold text-[aliceblue]'>{productData.name.toUpperCase()}</h1>

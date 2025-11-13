@@ -9,11 +9,12 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import Loading from '../component/Loading'
 
+
 function PlaceOrder() {
     let [method,setMethod] = useState('cod')
     let navigate = useNavigate()
     const {cartItem , setCartItem , getCartAmount , delivery_fee , products } = useContext(shopDataContext)
-    let {serverUrl} = useContext(authDataContext)
+    let {serverUrl} =  useContext(authDataContext)
     let [loading ,setLoading] = useState(false)
 
     let [formData,setFormData] = useState({
